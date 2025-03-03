@@ -1,4 +1,4 @@
-# Welcome to Jupyter Book 
+# Welcome to KOMPUTASI ALJABAR LINIER
 
 Ini adalah Jupyter Book Herly Nabila yang berisi tentang materi Komputasi Aljabar Linier
 
