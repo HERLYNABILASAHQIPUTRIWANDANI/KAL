@@ -458,11 +458,14 @@ I =
 \end{bmatrix}
 \)</span></p>
 <p>Gabungkan kedua matriks tersebut menjadi matriks augmented <span class="math notranslate nohighlight">\(( [A | I] )\)</span>:</p>
-<p>\begin{bmatrix}
-2  &amp; -1  &amp;  3  &amp; |  1  &amp;  0  &amp;  0  \
-1  &amp;  2  &amp; -2  &amp; |  0  &amp;  1  &amp;  0  \
-3  &amp; -3  &amp;  4  &amp; |  0  &amp;  0  &amp;  1<br />
-\end{bmatrix}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+2  &amp; -1  &amp;  3  &amp; |  1  &amp;  0  &amp;  0  \\
+1  &amp;  2  &amp; -2  &amp; |  0  &amp;  1  &amp;  0  \\
+3  &amp; -3  &amp;  4  &amp; |  0  &amp;  0  &amp;  1  
+\end{bmatrix}
+\end{split}\]</div>
 <p>Tujuan kita adalah mengubah bagian kiri menjadi matriks identitas, sehingga bagian kanan menjadi matriks invers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -627,15 +630,16 @@ R_3(1,6) &amp;= 1 - 3(0) = 1
 \end{bmatrix}
 \]</div>
 <ul class="simple">
-<li><p>Matriks Setelah Operasi
-$<span class="math notranslate nohighlight">\(
+<li><p>Matriks Setelah Operasi</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{bmatrix}
 1 &amp; -\frac{1}{2} &amp; \frac{3}{2} &amp; \frac{1}{2} &amp; 0 &amp; 0 \\
 0 &amp; \frac{5}{2} &amp; -\frac{7}{2} &amp; -\frac{1}{2} &amp; 1 &amp; 0 \\
 0 &amp; -\frac{3}{2} &amp; -\frac{1}{2} &amp; -\frac{3}{2} &amp; 0 &amp; 1
 \end{bmatrix}
-\)</span>$</p></li>
-</ul>
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -763,12 +767,13 @@ A =
 <ul class="simple">
 <li><p>Menghilangkan Elemen (1,2)</p></li>
 </ul>
-<p>Gunakan operasi baris:
-<span class="math notranslate nohighlight">\(
+<p>Gunakan operasi baris:</p>
+<p><span class="math notranslate nohighlight">\(
 R_1 = R_1 + \frac{1}{2} R_2
 \)</span></p>
-<p>Perhitungan setiap elemen pada baris pertama:
-$<span class="math notranslate nohighlight">\(
+<p>Perhitungan setiap elemen pada baris pertama:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{aligned}
 R_1(1,1) &amp;= 1 + \frac{1}{2} (0) = 1 \\
 R_1(1,2) &amp;= -\frac{1}{2} + \frac{1}{2} (1) = 0 \\
@@ -777,20 +782,22 @@ R_1(1,4) &amp;= \frac{1}{2} + \frac{1}{2} (-\frac{1}{5}) = \frac{2}{5} \\
 R_1(1,5) &amp;= 0 + \frac{1}{2} (\frac{2}{5}) = \frac{1}{5} \\
 R_1(1,6) &amp;= 0 + \frac{1}{2} (0) = 0
 \end{aligned}
-\)</span>$</p>
-<p>Hasil baris pertama setelah operasi:
-$<span class="math notranslate nohighlight">\(
+\end{split}\]</div>
+<p>Hasil baris pertama setelah operasi:</p>
+<div class="math notranslate nohighlight">
+\[
 \begin{bmatrix} 1 &amp; 0 &amp; \frac{4}{5} &amp; \frac{2}{5} &amp; \frac{1}{5} &amp; 0 \end{bmatrix}
-\)</span>$</p>
+\]</div>
 <ul class="simple">
 <li><p>Menghilangkan Elemen (3,2)</p></li>
 </ul>
-<p>Gunakan operasi baris:
-<span class="math notranslate nohighlight">\(
+<p>Gunakan operasi baris:</p>
+<p><span class="math notranslate nohighlight">\(
 R_3 = R_3 + \frac{3}{2} R_2
 \)</span></p>
-<p>Perhitungan setiap elemen pada baris ketiga:
-$<span class="math notranslate nohighlight">\(
+<p>Perhitungan setiap elemen pada baris ketiga:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{aligned}
 R_3(3,1) &amp;= 0 + \frac{3}{2} (0) = 0 \\
 R_3(3,2) &amp;= -\frac{3}{2} + \frac{3}{2} (1) = 0 \\
@@ -799,11 +806,12 @@ R_3(3,4) &amp;= -\frac{3}{2} + \frac{3}{2} (-\frac{1}{5}) = -\frac{9}{5} \\
 R_3(3,5) &amp;= 0 + \frac{3}{2} (\frac{2}{5}) = \frac{3}{5} \\
 R_3(3,6) &amp;= 1 + \frac{3}{2} (0) = 1
 \end{aligned}
-\)</span>$</p>
-<p>Hasil baris ketiga setelah operasi:
-$<span class="math notranslate nohighlight">\(
+\end{split}\]</div>
+<p>Hasil baris ketiga setelah operasi:</p>
+<div class="math notranslate nohighlight">
+\[
 \begin{bmatrix} 0 &amp; 0 &amp; -\frac{13}{5} &amp; -\frac{9}{5} &amp; \frac{3}{5} &amp; 1 \end{bmatrix}
-\)</span>$</p>
+\]</div>
 <p>Sehingga matriks setelah langkah ini menjadi:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
