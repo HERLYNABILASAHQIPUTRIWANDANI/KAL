@@ -375,6 +375,8 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-5-membuat-elemen-1-2-dan-3-2-menjadi-0"><strong>Langkah 5: Membuat Elemen (1,2) dan (3,2) Menjadi 0</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-6-membuat-elemen-3-3-menjadi-1"><strong>Langkah 6: Membuat Elemen (3,3) Menjadi 1</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-7-membuat-elemen-1-3-dan-2-3-menjadi-0"><strong>Langkah 7: Membuat Elemen (1,3) dan (2,3) Menjadi 0</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-dari-sistem-persamaan-linear"><strong>Solusi dari sistem persamaan linear</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-sistem-persamaan-linear-menggunakan-invers-matriks"><strong>Penyelesaian Sistem Persamaan Linear Menggunakan Invers Matriks</strong></a></li>
 </ul>
 </li>
 </ul>
@@ -630,16 +632,15 @@ R_3(1,6) &amp;= 1 - 3(0) = 1
 \end{bmatrix}
 \]</div>
 <ul class="simple">
-<li><p>Matriks Setelah Operasi</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<li><p>Matriks Setelah Operasi
+$<span class="math notranslate nohighlight">\(
 \begin{bmatrix}
 1 &amp; -\frac{1}{2} &amp; \frac{3}{2} &amp; \frac{1}{2} &amp; 0 &amp; 0 \\
 0 &amp; \frac{5}{2} &amp; -\frac{7}{2} &amp; -\frac{1}{2} &amp; 1 &amp; 0 \\
 0 &amp; -\frac{3}{2} &amp; -\frac{1}{2} &amp; -\frac{3}{2} &amp; 0 &amp; 1
 \end{bmatrix}
-\end{split}\]</div>
+\)</span>$</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -767,13 +768,12 @@ A =
 <ul class="simple">
 <li><p>Menghilangkan Elemen (1,2)</p></li>
 </ul>
-<p>Gunakan operasi baris:</p>
-<p><span class="math notranslate nohighlight">\(
+<p>Gunakan operasi baris:
+<span class="math notranslate nohighlight">\(
 R_1 = R_1 + \frac{1}{2} R_2
 \)</span></p>
-<p>Perhitungan setiap elemen pada baris pertama:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<p>Perhitungan setiap elemen pada baris pertama:
+$<span class="math notranslate nohighlight">\(
 \begin{aligned}
 R_1(1,1) &amp;= 1 + \frac{1}{2} (0) = 1 \\
 R_1(1,2) &amp;= -\frac{1}{2} + \frac{1}{2} (1) = 0 \\
@@ -782,22 +782,20 @@ R_1(1,4) &amp;= \frac{1}{2} + \frac{1}{2} (-\frac{1}{5}) = \frac{2}{5} \\
 R_1(1,5) &amp;= 0 + \frac{1}{2} (\frac{2}{5}) = \frac{1}{5} \\
 R_1(1,6) &amp;= 0 + \frac{1}{2} (0) = 0
 \end{aligned}
-\end{split}\]</div>
-<p>Hasil baris pertama setelah operasi:</p>
-<div class="math notranslate nohighlight">
-\[
+\)</span>$</p>
+<p>Hasil baris pertama setelah operasi:
+$<span class="math notranslate nohighlight">\(
 \begin{bmatrix} 1 &amp; 0 &amp; \frac{4}{5} &amp; \frac{2}{5} &amp; \frac{1}{5} &amp; 0 \end{bmatrix}
-\]</div>
+\)</span>$</p>
 <ul class="simple">
 <li><p>Menghilangkan Elemen (3,2)</p></li>
 </ul>
-<p>Gunakan operasi baris:</p>
-<p><span class="math notranslate nohighlight">\(
+<p>Gunakan operasi baris:
+<span class="math notranslate nohighlight">\(
 R_3 = R_3 + \frac{3}{2} R_2
 \)</span></p>
-<p>Perhitungan setiap elemen pada baris ketiga:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<p>Perhitungan setiap elemen pada baris ketiga:
+$<span class="math notranslate nohighlight">\(
 \begin{aligned}
 R_3(3,1) &amp;= 0 + \frac{3}{2} (0) = 0 \\
 R_3(3,2) &amp;= -\frac{3}{2} + \frac{3}{2} (1) = 0 \\
@@ -806,12 +804,11 @@ R_3(3,4) &amp;= -\frac{3}{2} + \frac{3}{2} (-\frac{1}{5}) = -\frac{9}{5} \\
 R_3(3,5) &amp;= 0 + \frac{3}{2} (\frac{2}{5}) = \frac{3}{5} \\
 R_3(3,6) &amp;= 1 + \frac{3}{2} (0) = 1
 \end{aligned}
-\end{split}\]</div>
-<p>Hasil baris ketiga setelah operasi:</p>
-<div class="math notranslate nohighlight">
-\[
+\)</span>$</p>
+<p>Hasil baris ketiga setelah operasi:
+$<span class="math notranslate nohighlight">\(
 \begin{bmatrix} 0 &amp; 0 &amp; -\frac{13}{5} &amp; -\frac{9}{5} &amp; \frac{3}{5} &amp; 1 \end{bmatrix}
-\]</div>
+\)</span>$</p>
 <p>Sehingga matriks setelah langkah ini menjadi:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -985,6 +982,159 @@ R_2(1,6) &amp;= 0 + \frac{7}{5} \times \frac{-5}{13} = -\frac{7}{13}
 </div>
 </div>
 </section>
+<section id="solusi-dari-sistem-persamaan-linear">
+<h3><strong>Solusi dari sistem persamaan linear</strong><a class="headerlink" href="#solusi-dari-sistem-persamaan-linear" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[ AX = B \]</div>
+<div class="math notranslate nohighlight">
+\[ A^{-1} AX = A^{-1} B\]</div>
+<div class="math notranslate nohighlight">
+\[ IX = A^{-1} B\]</div>
+<div class="math notranslate nohighlight">
+\[ X = A^{-1} B\]</div>
+</section>
+<section id="penyelesaian-sistem-persamaan-linear-menggunakan-invers-matriks">
+<h3><strong>Penyelesaian Sistem Persamaan Linear Menggunakan Invers Matriks</strong><a class="headerlink" href="#penyelesaian-sistem-persamaan-linear-menggunakan-invers-matriks" title="Link to this heading">#</a></h3>
+<p>Diketahui sistem persamaan linear:
+$<span class="math notranslate nohighlight">\(
+AX = B
+\)</span>$</p>
+<p>dengan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^{-1} =
+\begin{bmatrix}
+\frac{2}{13} &amp; \frac{17}{65} &amp; \frac{4}{13} \\
+\frac{10}{13} &amp; \frac{1}{13} &amp; -\frac{7}{13} \\
+\frac{9}{13} &amp; -\frac{3}{13} &amp; -\frac{5}{13}
+\end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B =
+\begin{bmatrix}
+2 \\
+1 \\
+3
+\end{bmatrix}
+\end{split}\]</div>
+<p><strong>Penyelesaian</strong></p>
+<p>Karena $<span class="math notranslate nohighlight">\( X = A^{-1} B \)</span>$ maka kita hitung:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+X =
+\begin{bmatrix}
+\frac{2}{13} &amp; \frac{17}{65} &amp; \frac{4}{13} \\
+\frac{10}{13} &amp; \frac{1}{13} &amp; -\frac{7}{13} \\
+\frac{9}{13} &amp; -\frac{3}{13} &amp; -\frac{5}{13}
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+2 \\
+1 \\
+3
+\end{bmatrix}
+\end{split}\]</div>
+<p>Hitung setiap elemen pada vektor hasil:</p>
+<p><strong>Baris pertama:</strong>
+$<span class="math notranslate nohighlight">\(
+\left(\frac{2}{13} \times 2\right) + \left(\frac{17}{65} \times 1\right) + \left(\frac{4}{13} \times 3\right)
+\)</span>$</p>
+<div class="math notranslate nohighlight">
+\[
+= \frac{4}{13} + \frac{17}{65} + \frac{12}{13}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+= \frac{16}{13} + \frac{17}{65}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+= \frac{80}{65} + \frac{17}{65} = \frac{97}{65} \approx 1.49
+\]</div>
+<p><strong>Baris kedua:</strong>
+$<span class="math notranslate nohighlight">\(
+\left(\frac{10}{13} \times 2\right) + \left(\frac{1}{13} \times 1\right) + \left(-\frac{7}{13} \times 3\right)
+\)</span>$</p>
+<div class="math notranslate nohighlight">
+\[
+= \frac{20}{13} + \frac{1}{13} - \frac{21}{13} = \frac{0}{13} = 0
+\]</div>
+<p><strong>Baris ketiga:</strong>
+$<span class="math notranslate nohighlight">\(
+\left(\frac{9}{13} \times 2\right) + \left(-\frac{3}{13} \times 1\right) + \left(-\frac{5}{13} \times 3\right)
+\)</span>$</p>
+<div class="math notranslate nohighlight">
+\[
+= \frac{18}{13} - \frac{3}{13} - \frac{15}{13} = \frac{0}{13} = 0
+\]</div>
+<p><strong>Hasil Akhir</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+X =
+\begin{bmatrix}
+1.49 \\
+0 \\
+0
+\end{bmatrix}
+\end{split}\]</div>
+<p>Jadi, solusi sistem persamaan adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+X =
+\begin{bmatrix}
+1.49 \\
+0 \\
+0
+\end{bmatrix}
+\end{split}\]</div>
+<p>Jika dibulatkan ke bilangan bulat terdekat: $<span class="math notranslate nohighlight">\(\quad 1.49 \approx 1\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Didefinisikan matriks A^(-1) dan vektor B</span>
+<span class="n">A_inv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">2</span><span class="o">/</span><span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="o">/</span><span class="mi">65</span><span class="p">,</span> <span class="mi">4</span><span class="o">/</span><span class="mi">13</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">10</span><span class="o">/</span><span class="mi">13</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">13</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="o">/</span><span class="mi">13</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">9</span><span class="o">/</span><span class="mi">13</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="o">/</span><span class="mi">13</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="o">/</span><span class="mi">13</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="c1"># Menghitung X = A^(-1) * B</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A_inv</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+
+<span class="c1"># Menampilkan hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Solusi X:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="c1"># Membulatkan hasil ke bilangan bulat terdekat</span>
+<span class="n">X_rounded</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Solusi X setelah dibulatkan:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_rounded</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Solusi X:
+[[ 1.49231]
+ [ 0.     ]
+ [-0.     ]]
+
+Solusi X setelah dibulatkan:
+[[ 1.]
+ [ 0.]
+ [-0.]]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -1055,6 +1205,8 @@ R_2(1,6) &amp;= 0 + \frac{7}{5} \times \frac{-5}{13} = -\frac{7}{13}
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-5-membuat-elemen-1-2-dan-3-2-menjadi-0"><strong>Langkah 5: Membuat Elemen (1,2) dan (3,2) Menjadi 0</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-6-membuat-elemen-3-3-menjadi-1"><strong>Langkah 6: Membuat Elemen (3,3) Menjadi 1</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-7-membuat-elemen-1-3-dan-2-3-menjadi-0"><strong>Langkah 7: Membuat Elemen (1,3) dan (2,3) Menjadi 0</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-dari-sistem-persamaan-linear"><strong>Solusi dari sistem persamaan linear</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-sistem-persamaan-linear-menggunakan-invers-matriks"><strong>Penyelesaian Sistem Persamaan Linear Menggunakan Invers Matriks</strong></a></li>
 </ul>
 </li>
 </ul>
