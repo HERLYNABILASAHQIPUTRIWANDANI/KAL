@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>INVERS MATRIKS &#8212; My sample book</title>
+    <title>Invers Matriks &#8212; My sample book</title>
   
   
   
@@ -65,6 +65,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Invers_Matriks';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Matrix Transformations" href="Matrix_Transformations.html" />
     <link rel="prev" title="penyelesaian sistem linear dengan menggunakan sistem persamaan linear gaus" href="sistem_persamaan_3variabel.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -171,7 +172,11 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="sistem_persamaan_3variabel.html">penyelesaian sistem linear dengan menggunakan sistem persamaan linear gaus</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>INVERS MATRIKS</strong></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Invers Matriks</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Matrix_Transformations.html">Matrix Transformations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Jawaban.html">Jawaban</a></li>
+</ul>
+</details></li>
 </ul>
 
     </div>
@@ -354,7 +359,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>INVERS MATRIKS</h1>
+    <h1>Invers Matriks</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -364,8 +369,8 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-matriks-invers"><strong>Definisi Matriks Invers</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syarat-matriks-memiliki-invers"><strong>Syarat Matriks Memiliki Invers</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-matriks-invers">Definisi Matriks Invers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syarat-matriks-memiliki-invers">Syarat Matriks Memiliki Invers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-3-persamaan"><strong>Matriks 3 Persamaan</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-penyelesaian"><strong>Langkah Penyelesaian</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-menuliskan-matriks-augmented-a-i"><strong>Langkah 1: Menuliskan Matriks Augmented [A | I]</strong></a></li>
@@ -391,29 +396,29 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="invers-matriks">
-<h1><strong>INVERS MATRIKS</strong><a class="headerlink" href="#invers-matriks" title="Link to this heading">#</a></h1>
+<h1>Invers Matriks<a class="headerlink" href="#invers-matriks" title="Link to this heading">#</a></h1>
 <section id="definisi-matriks-invers">
-<h2><strong>Definisi Matriks Invers</strong><a class="headerlink" href="#definisi-matriks-invers" title="Link to this heading">#</a></h2>
+<h2>Definisi Matriks Invers<a class="headerlink" href="#definisi-matriks-invers" title="Link to this heading">#</a></h2>
 <p>Matriks invers adalah matriks yang, jika dikalikan dengan matriks asalnya, menghasilkan matriks identitas. Jika A adalah matriks persegi (memiliki jumlah baris dan kolom yang sama), maka invers dari A, yang ditulis sebagai <span class="math notranslate nohighlight">\(A^{-1}\)</span>, memenuhi:</p>
 <div class="math notranslate nohighlight">
 \[ A \times A^{-1} = A^{-1} \times A = I \]</div>
 <p>di mana <span class="math notranslate nohighlight">\(I\)</span> adalah matriks identitas, yaitu matriks dengan elemen diagonal utama bernilai 1 dan elemen lainnya bernilai 0.</p>
 </section>
 <section id="syarat-matriks-memiliki-invers">
-<h2><strong>Syarat Matriks Memiliki Invers</strong><a class="headerlink" href="#syarat-matriks-memiliki-invers" title="Link to this heading">#</a></h2>
+<h2>Syarat Matriks Memiliki Invers<a class="headerlink" href="#syarat-matriks-memiliki-invers" title="Link to this heading">#</a></h2>
 <p>Suatu matriks <span class="math notranslate nohighlight">\(A\)</span> bisa dibalik (memiliki invers) jika dan hanya jika:</p>
 <ol class="arabic simple">
-<li><p><strong>Matriks Persegi</strong></p>
+<li><p>Matriks Persegi</p>
 <ul class="simple">
 <li><p>Matriks harus memiliki jumlah baris dan kolom yang sama (matriks <span class="math notranslate nohighlight">\(n \times n\)</span>).</p></li>
 </ul>
 </li>
-<li><p><strong>Determinan Tidak Nol</strong></p>
+<li><p>Determinan Tidak Nol</p>
 <ul class="simple">
 <li><p>Determinan matriks tidak boleh nol (<span class="math notranslate nohighlight">\(\det(A) \neq 0\)</span>). Jika determinan nol, maka matriks disebut <em>singular</em> dan tidak memiliki invers.</p></li>
 </ul>
 </li>
-<li><p><strong>Rang Matriks Sama dengan Ordo</strong></p>
+<li><p>Rang Matriks Sama dengan Ordo</p>
 <ul class="simple">
 <li><p>Rang (jumlah baris atau kolom yang tidak nol setelah eliminasi Gauss) dari matriks harus sama dengan ordo matriksnya (<span class="math notranslate nohighlight">\(\text{rank}(A) = n\)</span>).</p></li>
 </ul>
@@ -1185,6 +1190,15 @@ Solusi X setelah dibulatkan:
         <p class="prev-next-title">penyelesaian sistem linear dengan menggunakan sistem persamaan linear gaus</p>
       </div>
     </a>
+    <a class="right-next"
+       href="Matrix_Transformations.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Matrix Transformations</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -1202,8 +1216,8 @@ Solusi X setelah dibulatkan:
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-matriks-invers"><strong>Definisi Matriks Invers</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syarat-matriks-memiliki-invers"><strong>Syarat Matriks Memiliki Invers</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-matriks-invers">Definisi Matriks Invers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syarat-matriks-memiliki-invers">Syarat Matriks Memiliki Invers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-3-persamaan"><strong>Matriks 3 Persamaan</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-penyelesaian"><strong>Langkah Penyelesaian</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-menuliskan-matriks-augmented-a-i"><strong>Langkah 1: Menuliskan Matriks Augmented [A | I]</strong></a></li>
