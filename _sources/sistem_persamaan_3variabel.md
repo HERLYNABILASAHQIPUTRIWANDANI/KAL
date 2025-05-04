@@ -8,7 +8,7 @@ title: sistem_persamaan_3variabel
 
 ---
 
-# penyelesaian sistem linear dengan menggunakan sistem persamaan linear gaus
+# Penyelesaian Sistem Linear Dengan Menggunakan Sistem Persamaan Linear Gaus
 ## Sistem Persamaan Linear dengan 3 Persamaan
 $
 \begin{cases}3x + 2y - z = 4 & \text { (Persamaan 1) } \\ 2x - y + 3z = 5 & \text { (Persamaan 2) } \\ x + 4y + 2z = 6 & \text { (Persamaan 3) }\end{cases}
