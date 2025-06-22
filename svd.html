@@ -393,6 +393,9 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-singular-value">4. Hitung Singular Value</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-u">5. Hitung <span class="math notranslate nohighlight">\(U\)</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-matriks-3x2">Contoh Matriks 3x2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-eigenvalue-dan-eigenvector-dari-a-t-a">1. Perhitungan Eigenvalue dan Eigenvector dari <span class="math notranslate nohighlight">\(A^T A\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dekomposisi-matriks-spektral">2. Dekomposisi Matriks (Spektral)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#singular-value-decomposition-svd">3. Singular Value Decomposition (SVD)</a></li>
 </ul>
 </li>
 </ul>
@@ -720,74 +723,150 @@ A reconstructed from SVD:
 </section>
 <section id="contoh-matriks-3x2">
 <h3>Contoh Matriks 3x2<a class="headerlink" href="#contoh-matriks-3x2" title="Link to this heading">#</a></h3>
+<p>Diberikan matriks:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-A=\left[\begin{array}{ll}
+A = \begin{bmatrix}
 4 &amp; 1 \\
 2 &amp; 7 \\
 1 &amp; 4
-\end{array}\right]
+\end{bmatrix}
 \end{split}\]</div>
-<ol class="arabic simple">
-<li><p>Perhitungan Eigenvalue &amp; Eigenvector dari <span class="math notranslate nohighlight">\(A^T A\)</span></p></li>
-</ol>
-<p>Langkah awal: Hitung <span class="math notranslate nohighlight">\(A^T A\)</span>
-$<span class="math notranslate nohighlight">\(
-A^T A=\left[\begin{array}{ll}
+</section>
+<section id="perhitungan-eigenvalue-dan-eigenvector-dari-a-t-a">
+<h3>1. Perhitungan Eigenvalue dan Eigenvector dari <span class="math notranslate nohighlight">\(A^T A\)</span><a class="headerlink" href="#perhitungan-eigenvalue-dan-eigenvector-dari-a-t-a" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Langkah 1: Transpose Matriks <span class="math notranslate nohighlight">\(A\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^T = \begin{bmatrix}
+4 &amp; 2 &amp; 1 \\
+1 &amp; 7 &amp; 4
+\end{bmatrix}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>Langkah 2: Hitung <span class="math notranslate nohighlight">\(A^T A\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^T A =
+\begin{bmatrix}
+4 &amp; 2 &amp; 1 \\
+1 &amp; 7 &amp; 4
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+4 &amp; 1 \\
+2 &amp; 7 \\
+1 &amp; 4
+\end{bmatrix}
+=
+\begin{bmatrix}
 21 &amp; 22 \\
 22 &amp; 66
-\end{array}\right]
-\)</span>$</p>
-<p>Eigenvalue dari <span class="math notranslate nohighlight">\(A^T A\)</span> :
-$<span class="math notranslate nohighlight">\(
+\end{bmatrix}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>Langkah 3: Eigenvalue</p></li>
+</ul>
+<p>Mencari <span class="math notranslate nohighlight">\(\lambda\)</span> dari:</p>
+<div class="math notranslate nohighlight">
+\[
+\det(A^T A - \lambda I) = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left|
+\begin{array}{cc}
+21 - \lambda &amp; 22 \\
+22 &amp; 66 - \lambda
+\end{array}
+\right| = 0
+\end{split}\]</div>
+<p>Hasilnya:</p>
+<div class="math notranslate nohighlight">
+\[
 \lambda_1 \approx 74.97, \quad \lambda_2 \approx 12.03
-\)</span>$</p>
-<p>Eigenvector dari <span class="math notranslate nohighlight">\(\boldsymbol{A}^{\mathrm{T}} \boldsymbol{A}\)</span> (kolom = eigenvector):
-$<span class="math notranslate nohighlight">\(
-V=\left[\begin{array}{cc}
+\]</div>
+<ul class="simple">
+<li><p>Langkah 4: Eigenvector</p></li>
+</ul>
+<p>Eigenvector yang sesuai (sudah dinormalisasi):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+V = \begin{bmatrix}
 -0.9200 &amp; -0.3775 \\
 0.3775 &amp; -0.9260
-\end{array}\right]
-\)</span>$
-2. Dekomposisi Matriks (Matrix Transformation)</p>
-<p>Tansformad slgarhask artinga Wta Eta tulf:
-$<span class="math notranslate nohighlight">\(
-A^T A=V A V^T
-\)</span><span class="math notranslate nohighlight">\(
-dangan A adalth matrile dlagonal dari alganwalux
-\)</span><span class="math notranslate nohighlight">\(
-\Lambda=\left[\begin{array}{cc}
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+<section id="dekomposisi-matriks-spektral">
+<h3>2. Dekomposisi Matriks (Spektral)<a class="headerlink" href="#dekomposisi-matriks-spektral" title="Link to this heading">#</a></h3>
+<p>Karena <span class="math notranslate nohighlight">\(A^T A\)</span> simetris, maka dapat ditulis:</p>
+<div class="math notranslate nohighlight">
+\[
+A^T A = V \Lambda V^T
+\]</div>
+<p>dengan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\Lambda = \begin{bmatrix}
 74.97 &amp; 0 \\
 0 &amp; 12.03
-\end{array}\right]
-\)</span><span class="math notranslate nohighlight">\(
-3. Singular Value Decomposition (SVD)
-\)</span><span class="math notranslate nohighlight">\(
-A=U \Sigma V^T
-\)</span>$</p>
-<p>Matriks <span class="math notranslate nohighlight">\(\Sigma\)</span> (singular values):
-$<span class="math notranslate nohighlight">\(
-\Sigma=\left[\begin{array}{cc}
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+<section id="singular-value-decomposition-svd">
+<h3>3. Singular Value Decomposition (SVD)<a class="headerlink" href="#singular-value-decomposition-svd" title="Link to this heading">#</a></h3>
+<p>Dekomposisi SVD dari <span class="math notranslate nohighlight">\(A\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+A = U \Sigma V^T
+\]</div>
+<ul class="simple">
+<li><p>a. Matriks <span class="math notranslate nohighlight">\(\Sigma\)</span> (Singular Values)</p></li>
+</ul>
+<p>Singular values adalah akar dari eigenvalue:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_1 = \sqrt{74.97} \approx 8.898, \quad \sigma_2 = \sqrt{12.03} \approx 3.469
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\Sigma = \begin{bmatrix}
 8.898 &amp; 0 \\
 0 &amp; 3.469 \\
 0 &amp; 0
-\end{array}\right] \quad \text { (akar dari elgenvalues) }
-\)</span>$</p>
-<p>Matriks <span class="math notranslate nohighlight">\(\mathrm{V}^T\)</span> (right singular vectors transposed):
-$<span class="math notranslate nohighlight">\(
-V^T=\left[\begin{array}{cc}
+\end{bmatrix}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>b. Matriks <span class="math notranslate nohighlight">\(V^T\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+V^T = \begin{bmatrix}
 -0.3775 &amp; -0.9260 \\
 0.9280 &amp; -0.3775
-\end{array}\right]
-\)</span>$</p>
-<p>Matriks <span class="math notranslate nohighlight">\(U\)</span> (left singular vectors):
-$<span class="math notranslate nohighlight">\(
-U=\left[\begin{array}{ccc}
+\end{bmatrix}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>c. Matriks <span class="math notranslate nohighlight">\(U\)</span></p></li>
+</ul>
+<p>Diperoleh dari perhitungan:</p>
+<div class="math notranslate nohighlight">
+\[
+u_i = \frac{1}{\sigma_i} A v_i
+\]</div>
+<p>Hasil akhir:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+U = \begin{bmatrix}
 -0.2813 &amp; 0.9580 &amp; 0.0333 \\
 -0.8389 &amp; -0.2279 &amp; -0.4924 \\
 -0.4714 &amp; -0.1083 &amp; 0.8657
-\end{array}\right]
-\)</span>$</p>
+\end{bmatrix}
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -976,6 +1055,9 @@ A Reconstructed:
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-singular-value">4. Hitung Singular Value</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-u">5. Hitung <span class="math notranslate nohighlight">\(U\)</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-matriks-3x2">Contoh Matriks 3x2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-eigenvalue-dan-eigenvector-dari-a-t-a">1. Perhitungan Eigenvalue dan Eigenvector dari <span class="math notranslate nohighlight">\(A^T A\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dekomposisi-matriks-spektral">2. Dekomposisi Matriks (Spektral)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#singular-value-decomposition-svd">3. Singular Value Decomposition (SVD)</a></li>
 </ul>
 </li>
 </ul>
